@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دانلود کلاس یار | نسخه اندروید</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Vazirmatn', sans-serif; }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0014;
+    background-image: radial-gradient(circle at top, #2c0b5e 0%, #0b0014 70%);
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(30, 10, 60, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 25px;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(138, 43, 226, 0.2);
+    animation: fadeIn 0.8s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 150px; height: 2px;
+    background: linear-gradient(90deg, transparent, #da70d6, transparent);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .app-logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+    border: 2px solid rgba(255,255,255,0.1);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  h1 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(218, 112, 214, 0.5);
+  }
+  
+  .desc {
+    color: #b3a1cc;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+  }
+  
+  /* دکمه دانلود اندروید */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #8a2be2, #da70d6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
+    margin-bottom: 15px; /* فاصله با دکمه بعدی */
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(218, 112, 214, 0.7);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .btn svg {
+    width: 24px; height: 24px;
+    fill: currentColor;
+  }
+
+  /* دکمه حالت سایت (استایل متفاوت) */
+  .btn-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: #da70d6;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #da70d6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(218, 112, 214, 0.2);
+  }
+
+  .btn-web:hover {
+    background: rgba(218, 112, 214, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(218, 112, 214, 0.4);
+  }
+
+  .btn-web svg {
+    width: 20px; height: 20px;
+    fill: currentColor;
+  }
+  
+  .info {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #7a6890;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .android-icon {
+    width: 14px; height: 14px;
+    fill: #7a6890;
+  }
+
+  /* بخش توسعه دهنده */
+  .footer-credit {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(138, 43, 226, 0.2);
+    font-size: 12px;
+    color: #7a6890;
+  }
+
+  .footer-credit a {
+    color: #da70d6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+
+  .footer-credit a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <!-- 👇 عکس لوگو -->
+  <img src="logo.jpg" alt="کلاس یار" class="app-logo">
+  
+  <h1>کلاس یار</h1>
+  <p class="desc">همراه هوشمند دانش‌آموزان و دانشجویان برای یادگیری بهتر و آسان‌تر</p>
+  
+  <!-- 👇 دکمه دانلود APK -->
+  <a href="classyar.apk" download class="btn">
+    <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    دانلود نسخه اندروید
+  </a>
+
+  <!-- 👇 دکمه حالت سایت (وب اپلیکیشن) -->
+  <a href="https://farazgostar.github.io/Cassyar/" target="_blank" rel="noopener" class="btn-web">
+    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+    ورود به حالت سایت (وب اپلیکیشن)
+  </a>
+  
+  <p class="info">
+    <span>
+      <svg class="android-icon" viewBox="0 0 24 24"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.463 11.463 0 00-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 001 18h22a10.78 10.78 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
+      نسخه 1.0.0
+    </span>
+    <span>|</span>
+    <span>حجم: 15 MB</span>
+  </p>
+
+  <!-- 👇 بخش توسعه دهنده -->
+  <div class="footer-credit">
+    توسعه یافته توسط <a href="https://github.com/farazgostar" target="_blank" rel="noopener">farazgostar</a>
+  </div>
+</div>
+
+</body>
+</html>
